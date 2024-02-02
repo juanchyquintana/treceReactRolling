@@ -1,10 +1,18 @@
+import { Container } from "react-bootstrap";
+import AppClima from "./components/AppClima";
+import Header from "./components/Header";
+import { ClimaProvider } from "./context/ClimaProvider";
 
 function App() {
 
   return (
-    <>
-      <h1>Vite + React</h1>
-    </>
+    <ClimaProvider> 
+      <Header />
+      
+      <Container>
+        <AppClima />
+      </Container>
+    </ClimaProvider>
   )
 }
 
